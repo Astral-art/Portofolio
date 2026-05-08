@@ -1,0 +1,88 @@
+/*
+  ========================================
+  Aura & Elemen Estetika (style.css)
+  Pusaka Digital: Tuan Astral
+  ========================================
+*/
+
+/* 
+  1. Kustomisasi Jalur Meridian (Scrollbar)
+  Membuat bilah gulir lebih elegan dan menyatu dengan alam Ghibli atau Kosmik.
+*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05); 
+}
+
+/* Penyesuaian saat dimensi memasuki Dark Mode (Galaxy) */
+html.dark ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7A9D54; /* Hijau Ghibli */
+    border-radius: 10px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: #8B5CF6; /* Ungu Galaxy / Nebula */
+}
+
+/* 
+  2. Jejak Sentuhan (Text Selection)
+  Mengubah warna latar belakang saat Tuan menyorot teks.
+*/
+::selection {
+    background: rgba(122, 157, 84, 0.3); /* Hijau redup */
+    color: inherit;
+}
+
+html.dark ::selection {
+    background: rgba(139, 92, 246, 0.4); /* Ungu redup */
+}
+
+/* 
+  3. Teknik Levitasi (Animasi Melayang)
+  Memberikan kesan magis ala Ghibli pada elemen visual utama.
+*/
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 
+  4. Harmonisasi Transisi Universal
+  Memastikan perpindahan siang ke malam (Light ke Dark) berjalan sangat halus
+  tanpa ada kilatan yang mengganggu mata batin.
+*/
+body, nav, section, div, h1, h2, h3, p, a, button, i {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Mencegah transisi berkedip saat pertama kali pusaka dimuat */
+.preload-transitions * {
+    transition: none !important;
+}
+
+/* 
+  5. Efek Kaca (Glassmorphism) Khusus
+  Meningkatkan kekuatan latar belakang tembus pandang pada wadah.
+*/
+.glass-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
